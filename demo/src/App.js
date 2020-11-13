@@ -111,16 +111,16 @@ const App = () => {
     console.log('users',users);
   }, [users]);
 
-  const editUser = useCallback(
-    (user, index) => (e) => {
-      const newUsers = [...users];
-      newUser.splice(index, 1, {
-        ...user,
-      });
-      setUsers(newUsers);
-    },
-    [users],
-  )
+  // const editUser = useCallback(
+  //   (user, index) => (e) => {
+  //     const newUsers = [...users];
+  //     newUser.splice(index, 1, {
+  //       ...user,
+  //     });
+  //     setUsers(newUsers);
+  //   },
+  //   [users],
+  // )
   const removeUser = useCallback((user) => (e) => {
     setUsers(users.filter(otherUser => otherUser !== user));
   }, [users]);
